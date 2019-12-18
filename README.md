@@ -1,6 +1,6 @@
 # xcode-open-on-github ⚙️
 
-Quick Actions for Xcode to jump to a source code line on Github or copy GitHub permalink to clipboard.
+Quick Actions for Xcode to jump to a source code line on Github or copy GitHub permalink to clipboard. Quick actions for doing the same in Bitbucket are included too.
 
 #### 1️⃣ Open on Github
 
