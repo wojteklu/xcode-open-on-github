@@ -16,7 +16,16 @@ Quick Actions for Xcode to jump to a source code line on Github or copy GitHub p
 
 ## Install
 
-Just click the files in quick-actions directory.
+Just double-click the files in quick-actions directory.
+
+#### Pro Tip ®
+You can create your own keyboard shortcuts for added actions:
+1. Open **System Preferences > Keyboard**. Click the **Shortcuts** tab and select **Services** from the list on the left side.
+2. Scroll all the way down the list of services. Under the **Text** heading you should find the quick actions you just added. Select it and click **Add Shortcut** to assign a global shortcut.
+
+<p align="left">
+  <img src="images/add_shortcut.png" width="450px"/>
+</p>
 
 ## Author
 
