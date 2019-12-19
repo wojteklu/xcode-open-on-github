@@ -16,7 +16,7 @@ Quick Actions for Xcode to jump to a source code line on Github or copy GitHub p
 
 ## Install
 
-Just double-click the files in quick-actions directory.
+Just double-click the files in quick-actions directory to add them to the Services menu.
 
 #### Pro Tip ®
 You can create your own keyboard shortcuts for added actions:
@@ -26,6 +26,14 @@ You can create your own keyboard shortcuts for added actions:
 <p align="left">
   <img src="images/add_shortcut.png" width="450px"/>
 </p>
+
+## How it works?
+
+Quick Actions for Xcode are AppleScript scripts. From the Xcode app we get a path of active document and selected lines. Using shell scripts we determine repository URL, current commit and top-level directory of a repository. All that allows constructing a GitHub link.
+
+<table><tr><td>
+  <img src="images/script.png" width="700px"/>
+</td></tr></table>
 
 ## Author
 
