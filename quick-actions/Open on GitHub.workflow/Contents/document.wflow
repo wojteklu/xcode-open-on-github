@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>492</string>
+	<string>444.42</string>
 	<key>AMApplicationVersion</key>
-	<string>2.10</string>
+	<string>2.9</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	tell application "Xcode"		set activeDocument to document 1 whose name ends with (word -1 of (get name of window 1))		set activeDocumentPath to path of activeDocument		set currentLines to selected paragraph range of activeDocument		set startLine to get item 1 of currentLines		set endLine to get item 2 of currentLines	end tell		set repositoryUrl to do shell script "cd $(dirname '" &amp; activeDocumentPath &amp; "'); git remote -v | grep fetch | awk '{print $2}' | sed 's/ssh:\\/\\/git@/https:\\/\\//' | sed 's/git@/https:\\/\\//' | sed 's/com:/com\\//' | sed 's/\\.git//'"		set pathToRepositoryDirLocation to do shell script "cd $(dirname '" &amp; activeDocumentPath &amp; "'); git rev-parse --show-toplevel "		set activeFilePathInRepository to replace_text(activeDocumentPath, pathToRepositoryDirLocation, "")		set currentCommit to do shell script "cd $(dirname '" &amp; activeDocumentPath &amp; "'); git rev-parse HEAD"		set githubUrl to repositoryUrl &amp; "/blob/" &amp; currentCommit &amp; activeFilePathInRepository &amp; "#L" &amp; startLine &amp; "-L" &amp; endLine		do shell script "open " &amp; replace_text(githubUrl, " ", "%20")	return inputend runon replace_text(this_text, search_string, replacement_string)	set prevTIDs to AppleScript's text item delimiters	set AppleScript's text item delimiters to the search_string	set the item_list to every text item of this_text	set AppleScript's text item delimiters to the replacement_string	set this_text to the item_list as string	set AppleScript's text item delimiters to prevTIDs	return this_textend replace_text</string>
+					<string>on run {input, parameters}	tell application "Xcode"		set activeDocument to document 1 whose name ends with (word -1 of (get name of window 1))		set activeDocumentPath to path of activeDocument		set currentLines to selected paragraph range of activeDocument		set startLine to get item 1 of currentLines		set endLine to get item 2 of currentLines	end tell		set repositoryUrl to do shell script "cd \"$(dirname '" &amp; activeDocumentPath &amp; "')\"; git remote -v | grep fetch | awk '{print $2}' | sed 's/ssh:\\/\\/git@/https:\\/\\//' | sed 's/git@/https:\\/\\//' | sed 's/com:/com\\//' | sed 's/\\.git//'"		set pathToRepositoryDirLocation to do shell script "cd \"$(dirname '" &amp; activeDocumentPath &amp; "')\"; git rev-parse --show-toplevel "		set activeFilePathInRepository to replace_text(activeDocumentPath, pathToRepositoryDirLocation, "")		set currentCommit to do shell script "cd \"$(dirname '" &amp; activeDocumentPath &amp; "')\"; git rev-parse HEAD"		set githubUrl to repositoryUrl &amp; "/blob/" &amp; currentCommit &amp; activeFilePathInRepository &amp; "#L" &amp; startLine &amp; "-L" &amp; endLine		do shell script "open " &amp; replace_text(githubUrl, " ", "%20")	return inputend runon replace_text(this_text, search_string, replacement_string)	set prevTIDs to AppleScript's text item delimiters	set AppleScript's text item delimiters to the search_string	set the item_list to every text item of this_text	set AppleScript's text item delimiters to the replacement_string	set this_text to the item_list as string	set AppleScript's text item delimiters to prevTIDs	return this_textend replace_text</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>440.500000:765.000000</string>
+				<string>541.500000:844.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
